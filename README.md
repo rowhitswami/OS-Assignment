@@ -1,7 +1,7 @@
 # OS Assignment
 This repository contains assignment questions of Operating System (CSE 316)
 
-### Questions
+### Question 1
 
 Write a C program to create two zombie processes and two orphan processes using system calls.
 
