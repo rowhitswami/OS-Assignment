@@ -14,10 +14,18 @@ There are lots of gift shops, they all are going to the gift shops and randomly
  students?
 """
 
-import algorithms.sorting as algo
+import random
 
-my_list = [5,6,56,12,45,3]
-print(algo.bubble_sort.sort(my_list))
+# Desclaring a list
+s=[]
+
+# Populating list with random numbers (gifts)
+for i in range(10):
+    a = random.randint(1, 20)
+    if a not in s:
+        s.append(a)
+print(s)
+
 
 
 
