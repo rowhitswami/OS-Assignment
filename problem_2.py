@@ -15,98 +15,27 @@ There are lots of gift shops, they all are going to the gift shops and randomly
 """
 
 import random
+from random import shuffle
 
-# Desclaring a list
-s=[]
-
+gift = []
 # Populating list with random numbers (gifts)
+gift = (random.sample(range(1, 50), 10))
+
+# sorting items in descending order
+gift.sort(reverse=True)
+
+# Creating students
+students = []
+s = "s"
+students = [s+str(i) for i in range(1, 11)]
+
+# Shuffling items in student (randomly reaching to the billing-counter)
+shuffle(students)
+
+# Zipping students with their gifts
+mapping = list(zip(students, gift))
+
+print("Order at which accountant gives preference to student who has maximum number of gifts")
+print("Sr.\tStudent\t\tNo. of Gifts")
 for i in range(10):
-    a = random.randint(1, 20)
-    if a not in s:
-        s.append(a)
-print(s)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    print(i+1,"\t",mapping[i][0],"\t\t",mapping[i][1])
