@@ -17,12 +17,20 @@ There are lots of gift shops, they all are going to the gift shops and randomly
 import random
 from random import shuffle
 
+# Sorting using Bubble Sort
+def bubbleSort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1] :
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+
 gift = []
 # Populating list with random numbers (gifts)
 gift = (random.sample(range(1, 50), 10))
 
 # sorting items in descending order
-gift.sort(reverse=True)
+bubbleSort(gift)
 
 # Creating students
 students = []
